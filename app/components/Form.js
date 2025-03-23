@@ -16,7 +16,7 @@ const Form = () => {
     const [transportType, setTransportType] = useState('Тип перевозки');
     const [loaders, setLoaders] = useState(0);
     const [phone, setPhone] = useState('');
-    const { user } = useUser(); // получаем авторизованного пользователя
+    const { user } = useUser(); 
     const [success, setSuccess] = useState('');
 
     const handleSubmit = async (e) => {
@@ -38,7 +38,7 @@ const Form = () => {
         if (res.ok) {
             setSuccess('Заявка успешно отправлена!');
 
-            // Очищаем форму
+      
             setPickupAddress('');
             setDeliveryAddress('');
             setTransportType('Тип перевозки');
@@ -50,7 +50,7 @@ const Form = () => {
     };
 
     return (
-        <div className='bg-no-repeat h-full ' style={{ backgroundImage: "url('./img/blur_5.svg')" }} >
+        <div id='form' className='bg-no-repeat h-full ' style={{ backgroundImage: "url('./img/blur_5.svg')" }} >
             <div className='container mx-auto mt-68 grid grid-cols-2 '>
                 <div>
                     <img src='./img/logo_2.svg' className='' />

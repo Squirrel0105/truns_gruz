@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Services = () => {
     return (
-        <div className='bg-repeat-round h-full ' style={{ backgroundImage: "url('./img/blur_3.png')" }} >
+        <div id='service' className='bg-repeat-round h-full ' style={{ backgroundImage: "url('./img/blur_3.png')" }} >
             <div className='container mx-auto relative'>
                 <h2 className=' text-[#4A5A6F] text-5xl font-bold text-center mt-10'>Услуги</h2>
                 <img src='./img/photo_uslugi_1.png' className='rounded-s-3xl mt-18' />

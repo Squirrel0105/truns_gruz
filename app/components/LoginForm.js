@@ -14,7 +14,7 @@ export default function LoginForm({ onSwitch, onClose }) {
     const [loginInput, setLoginInput] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const { login: loginUser } = useUser(); // ✅ Переименовали функцию
+    const { login: loginUser } = useUser(); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,8 +27,8 @@ export default function LoginForm({ onSwitch, onClose }) {
 
         if (res.ok) {
             const data = await res.json();
-            loginUser(data.user); // ✅ теперь это работает
-            onClose(); // закрываем модалку
+            loginUser(data.user); 
+            onClose(); 
         } else {
             const data = await res.json();
             setError(data.message || 'Ошибка входа');

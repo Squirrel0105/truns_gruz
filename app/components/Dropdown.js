@@ -49,7 +49,6 @@ export default function Dropdown({
         )}
       </div>
 
-      {/* Блок с грузчиками */}
       <div className="flex items-center border-2 border-solid border-[#8EACD5] bg-white rounded-full h-16 px-4 py-2 space-x-2">
         <span>Грузчики</span>
         <button

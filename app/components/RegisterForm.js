@@ -27,7 +27,6 @@ export default function RegisterForm({ onSwitch }) {
     });
 
     if (res.ok) {
-      alert('Успешная регистрация!');
       onSwitch(); 
     } else {
       const data = await res.json();

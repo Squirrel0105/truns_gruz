@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { db } from '../../DB/db'; // поправь путь, если отличается
+import { db } from '../../DB/db'; 
 
 export async function POST(req) {
     try {
@@ -10,7 +10,7 @@ export async function POST(req) {
             transportType,
             loaders,
             phone,
-            userId, // 👈 из авторизации
+            userId, 
         } = data;
 
         await db.query(

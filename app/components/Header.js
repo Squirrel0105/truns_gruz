@@ -22,7 +22,7 @@ const jost = Jost({
 
 
 const Header = () => {
-    const { user, logout } = useUser(); // ✅ добавь это!
+    const { user, logout } = useUser();
     const [showProfile, setShowProfile] = useState(false);
     const [showAuthModal, setShowAuthModal] = useState(false);
     const [authMode, setAuthMode] = useState('login');
@@ -38,14 +38,14 @@ const Header = () => {
                 <nav className="flex  flex-2/3 text-xl font-bold">
                     <div className="flex flex-1/2 justify-center">
                         <ul className='flex items-center '>
-                            <Link href='/'>
-                                <li className="px-4">о нас</li>
+                            <Link href='#our'>
+                                <li className="px-4 hover:text-[#0000004D] transition">о нас</li>
                             </Link>
-
-                            <button className="px-2 border-2 border-solid border-[#8EACD5] rounded-2xl hover:bg-[#8EACD5]  transition cursor-pointer ">оформить заказ</button>
-
-                            <Link href='/'>
-                                <li className="px-4">услуги</li>
+                            <Link href='#form'>
+                                <button className="px-2 border-2 border-solid border-[#8EACD5] rounded-2xl hover:bg-[#8EACD5]  transition cursor-pointer ">оформить заказ</button>
+                            </Link>
+                            <Link href='#service'>
+                                <li className="px-4 hover:text-[#0000004D] transition">услуги</li>
                             </Link>
                         </ul>
                     </div>
@@ -78,18 +78,17 @@ const Header = () => {
             <Modal show={showAuthModal} onClose={() => setShowAuthModal(false)}>
                 {authMode === 'login' ? (
                     <LoginForm
-                        onSwitch={() => setAuthMode('register')} // 👈 ОБЯЗАТЕЛЬНО!
+                        onSwitch={() => setAuthMode('register')}
                         onClose={() => setShowAuthModal(false)}
                     />
                 ) : (
                     <RegisterForm
-                        onSwitch={() => setAuthMode('login')} // 👈 и тут, если нужно
+                        onSwitch={() => setAuthMode('login')}
                         onClose={() => setShowAuthModal(false)}
                     />
                 )}
             </Modal>
 
-            {/* Модалка профиля */}
             <Modal show={showProfile} onClose={() => setShowProfile(false)}>
                 <div className="">
                     <h2 className="text-3xl font-bold text-[#4A5A6F] mt-20">Здравствуйте, {user?.login}</h2>
@@ -99,16 +98,18 @@ const Header = () => {
                                 <li onClick={() => setShowProfile(false)} className="pb-8 hover:text-[#4A5A6F] cursor-pointer">
                                     Мои заказы
                                 </li>
-                            </Link> 
-                            <li className="hover:text-[#4A5A6F]">Новый заказ</li>
+                            </Link>
+                            <Link href='#form'>
+                                <li onClick={() => setShowProfile(false)} className="hover:text-[#4A5A6F]">Новый заказ</li>
+                            </Link>
                         </ul>
                         <img src="./img/modal.svg" />
                     </div>
                     <button
                         onClick={() => {
-                            logout();               // 🧹 очистить контекст
-                            setShowProfile(false);  // ❌ закрыть модалку
-                            router.push('/');       // 🚀 редирект на главную
+                            logout();
+                            setShowProfile(false);
+                            router.push('/');
                         }}
                         className={`${jost.className} w-full h-15 bg-[#4A5A6F] text-white rounded-[40px] text-2xl mt-8 cursor-pointer hover:bg-[#8EACD5]`}
                     >

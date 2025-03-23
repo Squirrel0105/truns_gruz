@@ -8,7 +8,7 @@ const jost = Jost({
 
 const Our = () => {
     return (
-        <div className='bg-repeat-x w-full h-lvh mt-0' style={{ backgroundImage: "url('./img/blur_2.svg')" }} >
+        <div id='our' className='bg-repeat-x w-full h-lvh mt-0' style={{ backgroundImage: "url('./img/blur_2.svg')" }} >
             <div className='container mx-auto'>
                 <h2 className='text-[#4A5A6F] text-5xl font-bold text-center mt-15'>Наши преимущества</h2>
                 <div className='grid grid-flow-col grid-rows-3 gap-6 mt-10'>

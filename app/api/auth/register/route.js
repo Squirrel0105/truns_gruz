@@ -6,7 +6,6 @@ export async function POST(req) {
     try {
         const { login, password } = await req.json();
 
-        // Проверка на существующего пользователя
         const [existingUsers] = await db.query('SELECT * FROM user WHERE login = ?', [login]);
 
         if (existingUsers.length > 0) {
@@ -16,10 +15,8 @@ export async function POST(req) {
             );
         }
 
-        // Хэшируем пароль
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        // Сохраняем пользователя
         await db.query('INSERT INTO user (login, password) VALUES (?, ?)', [login, hashedPassword]);
 
         return NextResponse.json({ message: 'Регистрация успешна' });
