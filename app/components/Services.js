@@ -24,9 +24,7 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <button className='mr-6 bg-[#4A5A6F] text-white text-2xl font-bold rounded-4xl w-46 h-16 hover:bg-[#8EACD5] cursor-pointer'>от 450₽</button>
-                    </div>
+                   
                 </div>
 
                 <div className='absolute top-103 right-0 flex items-center w-4xl h-68 bg-white rounded-3xl justify-between py-8'>
@@ -48,9 +46,7 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <button className='mr-6 bg-[#4A5A6F] text-white text-2xl font-bold rounded-4xl w-46 h-16 hover:bg-[#8EACD5] cursor-pointer'>от 450₽</button>
-                    </div>
+                   
                 </div>
                 
                 <div className='absolute top-176 right-0 flex items-center w-4xl h-68 bg-white rounded-3xl justify-between py-8'>
@@ -72,9 +68,7 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <button className='mr-6 bg-[#4A5A6F] text-white text-2xl font-bold rounded-4xl w-46 h-16 hover:bg-[#8EACD5] cursor-pointer'>от 450₽</button>
-                    </div>
+                    
                 </div>
 
 
@@ -104,9 +98,7 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <button className='mr-6 bg-[#4A5A6F] text-white text-2xl font-bold rounded-4xl w-46 h-16 hover:bg-[#8EACD5] cursor-pointer'>от 450₽</button>
-                    </div>
+                    
                 </div>
 
                 <div className='absolute top-73 right-0 flex items-center w-4xl h-68 bg-white rounded-3xl justify-between py-8'>
@@ -128,9 +120,7 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <button className='mr-6 bg-[#4A5A6F] text-white text-2xl font-bold rounded-4xl w-46 h-16 hover:bg-[#8EACD5] cursor-pointer'>от 450₽</button>
-                    </div>
+                   
                 </div>
                 
                 
