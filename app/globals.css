@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url(../fonts/gothampro.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url(../fonts/gothampro_bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url(../fonts/gothampro_medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+body {
+  background-color: #F7FCFF;
+  color: #000;
+  font-family: 'Gotham Pro', sans-serif;
+}
