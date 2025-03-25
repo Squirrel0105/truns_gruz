@@ -64,7 +64,7 @@ const Form = () => {
 
     return (
         <div id='form' className='bg-no-repeat h-full ' style={{ backgroundImage: "url('./img/blur_5.svg')" }} >
-            <div className='container mx-auto mt-68 grid grid-cols-2 '>
+            <div className='container mx-auto mt-68 grid grid-cols-2 pb-40'>
                 <div>
                     <img src='./img/logo_2.svg' className='' />
                     <h2 className='text-4xl font-bold text-[#8EACD5] my-6'>Ваш комфорт и надежность</h2>

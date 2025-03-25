@@ -76,7 +76,7 @@ const Services = () => {
 
 
 
-
+{/* 
             </div>
             <div className='container mx-auto relative'>
                 <img src='./img/photo_uslugi_2.png' className='rounded-s-3xl mt-18' />
@@ -121,7 +121,7 @@ const Services = () => {
                         </div>
                     </div>
                    
-                </div>
+                </div> */}
                 
                 
 
