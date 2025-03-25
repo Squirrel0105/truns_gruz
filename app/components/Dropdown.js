@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import { useState } from 'react';
+
 
 export default function Dropdown({
   transportType,
@@ -7,7 +9,7 @@ export default function Dropdown({
   loaders,
   setLoaders
 }) {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const options = [
     "Мебель",

@@ -26,6 +26,11 @@ export default function MyOrdersPage() {
     fetchOrders();
   }, [user]);
 
+  if (!user) {
+    window.location.replace("/");
+    return;
+  }
+
   return (<div>
     <Header />
     <div className=' bg-repeat  ' style={{ backgroundImage: "url('../img/blur_order.svg')" }} >

@@ -28,7 +28,7 @@ const Header = () => {
     const [authMode, setAuthMode] = useState('login');
     const router = useRouter();
     return (
-        <header className="border-b-2 border-[#1D59AA] py-4 container mx-auto mt-5">
+        <header className="border-b-2 border-[#1D59AA] py-4 container mx-auto mt-5 ">
             <div className="flex flex-row items-center">
                 <div className=" flex-1/3">
                     <Link href='/'>
@@ -38,13 +38,13 @@ const Header = () => {
                 <nav className="flex  flex-2/3 text-xl font-bold">
                     <div className="flex flex-1/2 justify-center">
                         <ul className='flex items-center '>
-                            <Link href='#our'>
+                            <Link href='/?scroll=our'>
                                 <li className="px-4 hover:text-[#0000004D] transition">о нас</li>
                             </Link>
-                            <Link href='#form'>
+                            <Link href='/?scroll=form'>
                                 <button className="px-2 border-2 border-solid border-[#8EACD5] rounded-2xl hover:bg-[#8EACD5]  transition cursor-pointer ">оформить заказ</button>
                             </Link>
-                            <Link href='#service'>
+                            <Link href='/?scroll=service'>
                                 <li className="px-4 hover:text-[#0000004D] transition">услуги</li>
                             </Link>
                         </ul>
@@ -99,7 +99,7 @@ const Header = () => {
                                     Мои заказы
                                 </li>
                             </Link>
-                            <Link href='#form'>
+                            <Link href='/?scroll=form'>
                                 <li onClick={() => setShowProfile(false)} className="hover:text-[#4A5A6F]">Новый заказ</li>
                             </Link>
                         </ul>

@@ -1,12 +1,14 @@
 'use client';
 import { useState } from 'react';
-
-
 import Image from "next/image"
 import Dropdown from "./Dropdown"
 import Autopark from "./Autopark"
 import Change from "./Change"
 import { useUser } from '../context/UserContext';
+import LoginForm from './LoginForm';
+import RegisterForm from './RegisterForm';
+import Modal from './Modal';
+
 
 
 
@@ -16,12 +18,22 @@ const Form = () => {
     const [transportType, setTransportType] = useState('Тип перевозки');
     const [loaders, setLoaders] = useState(0);
     const [phone, setPhone] = useState('');
-    const { user } = useUser(); 
+    const { user } = useUser();
     const [success, setSuccess] = useState('');
+    const [showAuthModal, setShowAuthModal] = useState(false);
+    const [authMode, setAuthMode] = useState('login'); // 'login' | 'register'
 
+
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        
+        if (!user) {
+            setAuthMode('login');
+            setShowAuthModal(true);
+            return;
+        }
+        
         const res = await fetch('/api/form', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -38,7 +50,7 @@ const Form = () => {
         if (res.ok) {
             setSuccess('Заявка успешно отправлена!');
 
-      
+
             setPickupAddress('');
             setDeliveryAddress('');
             setTransportType('Тип перевозки');
@@ -48,6 +60,7 @@ const Form = () => {
             setSuccess('Ошибка при отправке заявки');
         }
     };
+
 
     return (
         <div id='form' className='bg-no-repeat h-full ' style={{ backgroundImage: "url('./img/blur_5.svg')" }} >
@@ -86,10 +99,25 @@ const Form = () => {
                         <div className="grid place-items-center">
                             <label className="text-sm text-[#4A5A6F] opacity-50  mt-6">Отправляя заявку, даю согласие на обработку персональных данных</label>
                             <button className="bg-[#4A5A6F] text-white text-2xl font-bold w-xl h-19 rounded-[40px]  my-4 cursor-pointer hover:bg-[#8EACD5]">Оформить заказ</button>
+                            {success && <p className="text-[#4A5A6F] text-center">{success}</p>}
+
                         </div>
                     </form>
                 </div>
             </div>
+            <Modal show={showAuthModal} onClose={() => setShowAuthModal(false)}>
+                {authMode === 'login' ? (
+                    <LoginForm
+                        onSwitch={() => setAuthMode('register')}
+                        onClose={() => setShowAuthModal(false)}
+                    />
+                ) : (
+                    <RegisterForm
+                        onSwitch={() => setAuthMode('login')}
+                        onClose={() => setShowAuthModal(false)}
+                    />
+                )}
+            </Modal>
             <Autopark />
         </div>
     )
