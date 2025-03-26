@@ -1,10 +1,10 @@
-import localFont from "next/font/local";
 import { UserProvider } from './context/UserContext';
 
 
 import "./globals.css";
 
 
+import localFont from "next/font/local";
 
 const gothamPro = localFont({
   src: [

@@ -4,9 +4,9 @@ import Our from "./components/Our";
 import Services from "./components/Services";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
-import { useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
 import Header from "./components/Header";
+import { useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 
 export default function Home() {

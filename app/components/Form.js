@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Image from "next/image"
 import Dropdown from "./Dropdown"
-import Autopark from "./Autopark"
+import Autopark from "./Avtopark"
 import Change from "./Change"
 import { useUser } from '../context/UserContext';
 import LoginForm from './LoginForm';
@@ -18,10 +18,10 @@ const Form = () => {
     const [transportType, setTransportType] = useState('Тип перевозки');
     const [loaders, setLoaders] = useState(0);
     const [phone, setPhone] = useState('');
-    const { user } = useUser();
     const [success, setSuccess] = useState('');
     const [showAuthModal, setShowAuthModal] = useState(false);
     const [authMode, setAuthMode] = useState('login'); // 'login' | 'register'
+    const { user } = useUser();
 
 
     
