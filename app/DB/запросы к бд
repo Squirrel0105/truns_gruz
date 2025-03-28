@@ -2,6 +2,7 @@ CREATE TABLE user (
   id INT AUTO_INCREMENT PRIMARY KEY,
   login VARCHAR(100) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL,
+  phone VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE orders (
@@ -13,6 +14,25 @@ CREATE TABLE orders (
   loaders INT,
   phone VARCHAR(20),
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-
+  total_price DECIMAL(10,2) NOT NULL,
   FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
 );
+
+CREATE TABLE loader_prices (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  price_per_loader DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE service_prices (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  service_type VARCHAR(100) NOT NULL UNIQUE,
+  price DECIMAL(10,2) NOT NULL
+);
+
+INSERT INTO loader_prices (id, price_per_loader) VALUES 
+(1, 500.00);
+
+INSERT INTO service_prices (id, service_type, price) VALUES 
+(1, 'Мебель', 5000.00),
+(2, 'Стройматериалы', 7000.00),
+(3, 'Бытовая техника', 6000.00);

@@ -51,8 +51,8 @@ const Header = () => {
                     </div>
                     <div className="flex flex-1/2">
                         <div className="flex items-center flex-2/3 justify-end">
-                            <img src="./img/phone.svg" className="pr-3"></img>
-                            <p>+7(916)-944-94-49</p>
+                        <a href="tel:+7(916)-944-94-49"><img src="./img/phone.svg" className="pr-3"/></a>
+                            <a href="tel:+7(916)-944-94-49">+7(916)-944-94-49</a>
                         </div>
                         <div className="flex-1/3 ">
                             {user ? (

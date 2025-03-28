@@ -10,8 +10,8 @@ const Footer = () => {
                 <div className="font-medium">
                     <h4 className="text-2xl text-[#4A5A6F] mb-6">Контакты</h4>
                     <ul className="text-xl text-[#8EACD5] ">
-                        <li>gruz@trans.com</li>
-                        <li className="py-4">+7(916)944-94-49</li>
+                        <li><a href="mailto:gruz@trans.com">gruz@trans.com</a></li>
+                        <li className="py-4"><a href="tel:+7(916)-944-94-49">+7(916)944-94-49</a></li>
                         <li>круглосуточно</li>
                     </ul>
                 </div>
@@ -19,7 +19,7 @@ const Footer = () => {
                 <div className="font-medium">
                     <h4 className="text-2xl text-[#4A5A6F] mb-6">Помощь</h4>
                     <ul className="text-xl text-[#8EACD5] ">
-                        <li>Сообщить об ошибке</li>
+                        <li><a href="mailto:gruz@trans.com">Сообщить об ошибке</a></li>
                     </ul>
                 </div>
             </div>
