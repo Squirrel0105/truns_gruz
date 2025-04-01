@@ -1,4 +1,4 @@
-// File: C:\Users\Milana\OneDrive\Desktop\курсач\truns_gruz2\app\layout.js
+// File: C:\Users\Milana\OneDrive\Desktop\курсач\truns_gruz\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

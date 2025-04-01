@@ -10,7 +10,7 @@ const Change = ({ pickupAddress, setPickupAddress, deliveryAddress, setDeliveryA
             <div className="border-2 border-solid border-[#8EACD5] bg-white rounded-full h-22 w-xl place-self-center flex items-center">
                 <div className='ml-8 '>
                     <label className='text-xl text-[#4A5A6F] opacity-50'>Введите</label><br />
-                    <input type='text' placeholder='Адрес погрузки' value={pickupAddress}
+                    <input type='text' required placeholder='Адрес погрузки' value={pickupAddress}
                         onChange={(e) => setPickupAddress(e.target.value)} className='text-2xl text-[#4A5A6F] outline-0' />
                 </div>
             </div>
@@ -20,7 +20,7 @@ const Change = ({ pickupAddress, setPickupAddress, deliveryAddress, setDeliveryA
             <div className="border-2 border-solid border-[#8EACD5] bg-white rounded-full h-22 w-xl place-self-center flex items-center">
                 <div className='ml-8 '>
                     <label className='text-xl text-[#4A5A6F] opacity-50'>Введите</label><br />
-                    <input type='text' placeholder='Адрес выгрузки' value={deliveryAddress}
+                    <input type='text' required placeholder='Адрес выгрузки' value={deliveryAddress}
                         onChange={(e) => setDeliveryAddress(e.target.value)} className='text-2xl text-[#4A5A6F] outline-0' />
                 </div>
             </div>

@@ -9,7 +9,7 @@ export function UserProvider({ children }) {
   useEffect(() => {
     const saved = localStorage.getItem('user');
     if (saved) setUser(JSON.parse(saved));
-  }, []); // отслеживает изменения и записывает в переменную const user
+  }, []);
 
   const login = (userData) => {
     setUser(userData);

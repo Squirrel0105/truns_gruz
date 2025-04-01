@@ -6,7 +6,7 @@ export default function Dropdown({
   transportType,
   setTransportType,
   loaders,
-  setLoaders
+  setLoaders,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,8 +25,7 @@ export default function Dropdown({
             e.preventDefault();
             setIsOpen(!isOpen);
           }}
-          className="border-2 border-solid border-[#8EACD5] bg-white rounded-full h-16 px-4 py-2 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
+          className={`border-2 border-solid border-[#8EACD5] bg-white rounded-full h-16 px-4 py-2 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500`}        >
           <span>{transportType}</span>
           <img src="./img/icon_type.svg" alt="Dropdown Icon" />
         </button>

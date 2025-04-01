@@ -115,6 +115,12 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (transportType === "Тип перевозки") {
+      setSuccess("Пожалуйста, выберите тип перевозки.");
+      return;
+    }
+  
+
     if (!user) {
       setAuthMode("login");
       setShowAuthModal(true);
@@ -177,6 +183,8 @@ const Form = () => {
               setTransportType={setTransportType}
               loaders={loaders}
               setLoaders={setLoaders}
+              isInvalid={transportType === "Тип перевозки"}
+
             />
 
             <div className="border-2 border-solid border-[#8EACD5] bg-white rounded-full h-22 w-xl place-self-center flex items-center">

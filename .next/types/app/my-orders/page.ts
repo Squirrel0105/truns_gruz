@@ -1,4 +1,4 @@
-// File: C:\Users\Milana\OneDrive\Desktop\курсач\truns_gruz2\app\my-orders\page.js
+// File: C:\Users\Milana\OneDrive\Desktop\курсач\truns_gruz\app\my-orders\page.js
 import * as entry from '../../../../app/my-orders/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
